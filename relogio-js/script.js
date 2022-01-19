@@ -3,7 +3,7 @@ let sElement = document.querySelector('.p_s');
 let mElement = document.querySelector('.p_m');
 let hElement = document.querySelector('.p_h');
 
-// função para atualizar o relógio analógico
+// updateClock -> função para atualizar o relógio analógico
 function updateClock() {
     let now = new Date();
     let hour = now.getHours();
@@ -11,6 +11,19 @@ function updateClock() {
     let second = now.getSeconds();
 
     digitalElement.innerHTML = `${fixZero(hour)}:${fixZero(minute)}:${fixZero(second)}`;
+
+    /*
+    sDeg -> variável para definir o grau do ponteiro de segundos
+    mDeg -> variável para definir o grau do ponteiro de minutos
+    hDeg -> variável para definir o grau do ponteiro de horas
+    */
+    let sDeg = ((360 / 60) * second) - 90;
+    let mDeg = ((360 / 60) * minute) - 90;
+    let hDeg = ((360 / 12) * hour) - 90;
+
+    sElement.style.transform = `rotate(${sDeg}deg)`;
+    mElement.style.transform = `rotate(${mDeg}deg)`;
+    hElement.style.transform = `rotate(${hDeg}deg)`;
 
 }
 
@@ -28,5 +41,6 @@ function fixZero(time) {
 
 }
 
-// setando um intervalo de 1000ms (1 segundo)
+// setando um intervalo de 1000ms (1 segundo) para atualizar o relógio
 setInterval(updateClock, 1000);
+updateClock();
