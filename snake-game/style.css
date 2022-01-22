@@ -1,0 +1,15 @@
+body {
+    height: 95vh;
+    width: 95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0588c5;
+}
+h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+} 
