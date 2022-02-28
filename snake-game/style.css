@@ -5,10 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #204d70;
+    background-color: #1d4768;
 }
 h1 {
-    color: #eee;
+    color: #EFEFEF;
     text-transform: uppercase;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
