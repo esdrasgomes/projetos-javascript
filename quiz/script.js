@@ -1,6 +1,6 @@
 // Initial Data
 
-let currentQuestion = 8;
+let currentQuestion = 0;
 
 showQuestion();
 
